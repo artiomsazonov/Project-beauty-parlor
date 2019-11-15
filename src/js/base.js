@@ -1,25 +1,39 @@
-var images = [
-   "../img/corusel/piling.png",
-  "../img/corusel/vosstanovlenie.jpg",
-   "../img/corusel/okrashivanie1.jpg",
-];
-var num = 0;
 
-function next() {
-    var slider = document.getElementById('slider');
-    num++;
-    if (num >= images.length) {
-        num = 0;
-    }
-    slider.src = images[num];
-}
+//olcorusel
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        nav: true,
+        margin:10,
+        merge:true,
+        autoplay: false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+        }
 
-function prev() {
-    var slider = document.getElementById('slider');
-    num--;
-    if (num < 0) {
-        num = images.length - 1;
-    }
-    slider.src = images[num];
-}
-// "http://akva-zona.ru/images/piling-dlya-lica.png",// "https://hqbeauty.by/wp-content/uploads/2019/05/blog-photo1.jpg",// "http://spaprofessional.su/images/2017/eyelash-tinting.jpg"// 
+    })
+})
+//---Hamburger
+$(function(){
+	
+	$('.menuBurger').on('click', function(){
+		
+		$('.menu').slideToggle(300, function(){
+			
+			if($(this).css('display') === 'none'){
+				$(this).removeAttr('style');
+		}
+		
+	});
+	
+ });
+	
+});
