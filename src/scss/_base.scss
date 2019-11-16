@@ -78,10 +78,12 @@ $hcolor:#545454;
     a {
         color: $mainColor;
     }
-a:hover{
-    color: #a652ac;
-    text-decoration: none;
-}
+
+    a:hover {
+        color: #a652ac;
+        text-decoration: none;
+    }
+
     .header_bottom-flex {
         display: flex;
         justify-content: space-between;
@@ -110,10 +112,12 @@ a:hover{
         }
     }
 }
-a:hover{
+
+a:hover {
     color: #a652ac !important;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
+
 a {
     text-decoration: none;
 }
@@ -379,15 +383,18 @@ hr.type {
             img[src="img/log.PNG"] {
                 padding-bottom: 15px
             }
+
             .tel,
             .email {
                 background-repeat: no-repeat;
                 background-position: 0px 60%;
             }
+
             .tel {
                 background-image: url("../img/mobile.gif");
 
             }
+
             .email {
                 background-image: url("../img/mail.gif");
             }
@@ -399,10 +406,12 @@ hr.type {
             .mgallery {
                 display: flex;
                 flex-wrap: wrap;
+
                 img {
                     width: 126px;
                     height: 105px;
                 }
+
                 .flex-mgallery {
                     padding-right: 5px;
                 }
@@ -424,12 +433,15 @@ hr.type {
             padding: 20px 0;
         }
     }
+
     .nav {
         a {
             color: $colortextbacck;
         }
+
         ul {
             display: flex;
+
             li {
                 font-weight: 700;
                 margin: 0 7px 0 13px;
@@ -448,7 +460,7 @@ hr.type {
     display: block;
 }
 
-.topbutton {
+.goUp {
     padding: 15px;
     position: fixed;
     bottom: 72px;
@@ -459,6 +471,9 @@ hr.type {
     background-repeat: no-repeat;
     background-position: center;
 }
+.none{
+    display: none;
+  }
 
 @media screen and (max-width: 991px) {
     .container {

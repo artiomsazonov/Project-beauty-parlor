@@ -37,3 +37,26 @@ $(function(){
  });
 	
 });
+//------goUp----
+var appended = false;
+$(window).scroll(function () {
+   var scroll = $(document).scrollTop();
+    if (scroll > 10) {
+        if (!appended) {
+            $('.goUp').removeClass('none');
+            appended = true;
+        }
+    }else if (appended){
+        $('.goUp').addClass('none');
+        appended = false;
+    }
+});
+
+
+$(document).ready(function () {
+    $('.goUp').click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000)
+    });
+});
