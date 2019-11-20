@@ -141,7 +141,7 @@ a {
     .menu li {
         display: block !important;
         display: block !important;
-        padding: 3px 0px !important;
+        padding: 0 0 2px 0 !important;
     }
 
     .menuBurger:hover {
@@ -243,12 +243,12 @@ a {
             border-radius: 50%;
             position: absolute;
             background: $bacckgoundcolor !important;
+            opacity: 0.6;
         }
 
         .owl-prev {
             top: 100px;
             left: 0px;
-
         }
 
         .owl-next {
@@ -258,26 +258,74 @@ a {
 
         .owl-next:hover {
             background-image: linear-gradient(to right, #aaaaff 0%, #fcbaf8 51%, #aaaaff 100%) !important;
+            opacity: 1;
         }
 
         .owl-prev:hover {
             background-image: linear-gradient(to right, #aaaaff 0%, #fcbaf8 51%, #aaaaff 100%) !important;
+            opacity: 1;
         }
 
         img {
             width: 380px;
             height: 260px;
+            border-radius: 100%;
+            border: 10px solid rgba(225, 225, 225, 0.7);
         }
 
-        h4 {
-            padding-top: 40px;
-            padding-bottom: 20px;
+        p {
+            font-size: 24px;
+            line-height: 27px;
+            color: #fac0f9;
+            display: block;
+            font-weight: 400;
+            padding: 10px 0 0;
+            font-style: normal;
+            font-family: "Arizonia", cursive;
+        }
+
+        .btn_button {
+            position: absolute;
+            top: 30%;
+            left: 50px;
+            display: none;
+            opacity: 0.6;
         }
     }
+
+    h4 {
+        padding-top: 40px;
+        padding-bottom: 10px;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0;
+        color: #2d2c40;
+        font-weight: 400;
+    }
+
+
+}
+
+.btn_button {
+    color: $colortextbacck;
+    padding: 0 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    background: #a292b3;
+    font: 500 14px/45px Poppins, Arial, Helvetica, sans-serif;
+}
+
+.hid {
+    display: none;
+}
+
+.btn_button:hover {
+    background-image: linear-gradient(to right, #aaaaff 0%, #fcbaf8 51%, #aaaaff 100%);
+    opacity: 1 !important;
 }
 
 button:focus {
-    outline: none !important
+    outline: none !important;
 }
 
 hr.type {
@@ -320,19 +368,12 @@ hr.type {
                 list-style-type: none;
             }
 
-            .button {
-                color: $colortextbacck;
-                height: 45px;
-                padding: 0 40px;
-                border-radius: 30px;
-                text-transform: uppercase;
-                background-size: 200% auto;
-                background: $bacckgoundcolor;
+            .btn_button {
+
+                display: inline !important;
+
             }
 
-            .button:hover {
-                background-image: linear-gradient(to right, #aaaaff 0%, #fcbaf8 51%, #aaaaff 100%);
-            }
 
         }
     }
@@ -372,7 +413,7 @@ hr.type {
             width: 270px;
 
             .contact {
-                padding-left: 40px;
+                padding-left: 15px;
             }
 
             h5 {
@@ -450,6 +491,120 @@ hr.type {
     }
 }
 
+// Modal word
+
+.mBtn {
+    cursor: pointer;
+}
+
+
+.mdl {
+    font-family: Arizonia, cursive;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+    .mdl-content {
+        position: relative;
+        background-color: #E1BEE7;
+        margin: auto;
+        padding: 0;
+        width: 35%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+
+
+        .mdl-header {
+            padding: 2px 16px;
+            background-color: $bacckgoundcolor;
+            color: white;
+
+            h2 {
+                margin: 0;
+            }
+
+            .cross {
+                color: white;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .cross:hover,
+            .cross:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+    }
+
+    .mdl-body {
+        .input {
+            padding: 5px 0;
+
+            span {
+                margin-bottom: 5px;
+            }
+
+            input[ type="text"] {
+                height: 30px;
+                font-size: 18px;
+                width: 95%;
+            }
+
+            input[ type="submit"] {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .mdl-footer {
+        padding: 2px 16px;
+        background-color: $bacckgoundcolor;
+        color: white;
+    }
+}
+
+
+
+// end modal ---------------
+
 .footer li:nth-child(1) {
     list-style-type: none;
 }
@@ -471,9 +626,10 @@ hr.type {
     background-repeat: no-repeat;
     background-position: center;
 }
-.none{
+
+.none {
     display: none;
-  }
+}
 
 @media screen and (max-width: 991px) {
     .container {
