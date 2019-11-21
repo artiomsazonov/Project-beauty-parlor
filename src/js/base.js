@@ -6,13 +6,13 @@ $(document).ready(function () {
         nav: true,
         margin: 10,
         merge: true,
-        autoplay: false,
+        autoplay: true,
         responsive: {
             0: {
                 items: 1
             },
             600: {
-                items: 3
+                items: 2
             },
             1000: {
                 items: 4
@@ -89,4 +89,3 @@ document.addEventListener('click', function(event) {
 span.onclick = function() {
     modal.hidden = !modal.hidden;
 }
-
