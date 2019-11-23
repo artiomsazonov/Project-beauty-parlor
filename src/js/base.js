@@ -78,14 +78,46 @@ linc2.mouseenter(function () {
 // modal word
 
 var modal = document.getElementById('mdl');
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     var id = event.target.dataset.toggleId;
     if (!id) return;
     modal.hidden = !modal.hidden;
-  });
-  var span = document.getElementsByClassName("cross")[0];
+});
+var span = document.getElementsByClassName("cross")[0];
 
 
-span.onclick = function() {
+span.onclick = function () {
     modal.hidden = !modal.hidden;
 }
+// //---valid
+// $(document).ready(function() {
+//     $('form[id="second_form"]').validate({
+//         rules: {
+//           service: 'required',
+//           lname: 'required',          
+//           tel: {
+//             required: true,
+//             minlength: 8,
+//           }
+//         },
+//         messages: {
+//           service: 'Поле пустое',
+//           lname: 'Поле пустое',
+//           tel: {
+//             required: 'Поле пустое',
+//             minlength: 'Телефон должен содержать не меньше 8 символов'
+//           }
+//         },
+//         submitHandler: function(form) {
+//           form.submit();
+//         }
+//       });
+//   });
+  
+// ---- UL
+$(".five li ul").hide();
+$(".five li:has('.submenu')").hover(
+    function () {
+        $(".five li ul").stop().fadeToggle(300);
+    }
+);
