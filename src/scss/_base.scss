@@ -895,7 +895,10 @@ hr.type {
   .header_top_item span {
     display: block;
   }
-
+  .header .header_top {
+    font-size: 14px;}
+    .menuBurger {
+      top: 72px;}
   .section_hover {
     .carousel-inner {
       .carousel-caption {
@@ -930,7 +933,7 @@ hr.type {
 
   .owl-carousel {
     .owl-next {
-      left: 242px;
+      left: 300px;
     }
 
     .owl-prev {
@@ -938,13 +941,13 @@ hr.type {
     }
 
     .owl-item {
-      padding-left: 0px;
+      padding-left: 25px;
 
       .owl-items {
 
         h4,
         p {
-          padding-right: 0px;
+          padding-right: 65px;
         }
       }
     }
@@ -985,19 +988,5 @@ hr.type {
 
   .owl-carousel .owl-next {
     left: 230px;
-  }
-}
-.fon{
-  background-image: url("../img/baner.jpg");
-  .cont{    
-    a {  
-      color: $mainColor;
-    }
-      text-align: center;
-      ul{list-style: none;
-       li{
-        display: inline-block;
-       }
-      }
   }
 }
