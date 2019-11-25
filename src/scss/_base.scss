@@ -33,7 +33,7 @@ $hcolor: #545454;
     justify-content: space-between;
 
     .header_top_item {
-      .contact {        
+      .contact {
         color: $colortextbacck;
         padding-left: 30px;
       }
@@ -63,7 +63,8 @@ $hcolor: #545454;
   }
 }
 
-.tel:hover, .email:hover  {
+.tel:hover,
+.email:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -74,18 +75,20 @@ $hcolor: #545454;
   a {
     color: $mainColor;
   }
+
   .header_bottom-flex {
     display: flex;
     justify-content: space-between;
 
     .logo {
       padding: 5px 15px 5px 0;
+
       img {
         height: 105px;
       }
     }
 
-    .nav {      
+    .nav {
       font-size: 18px;
       font-weight: 850;
       color: $mainColor;
@@ -93,7 +96,7 @@ $hcolor: #545454;
     }
 
     ul {
-      list-style: none;     
+      list-style: none;
     }
 
     .topmenu>li {
@@ -125,6 +128,7 @@ $hcolor: #545454;
       -o-transition: 0.5s ease-in-out;
       transition: 0.5s ease-in-out;
     }
+
     .nav .submenu {
       display: none;
       background: $bordercolor;
@@ -265,12 +269,12 @@ a:hover {
 
     .owl-prev {
       top: 100px;
-      left: 0px;
+      left: -38px;
     }
 
     .owl-next {
       top: 100px;
-      right: 0px;
+      right: -52px;
     }
 
     .owl-next:hover {
@@ -396,7 +400,7 @@ hr.type {
   color: $colortext;
   padding: 15px 0;
   font-size: 14px;
-  
+
   h4 {
     font-size: 22px;
     text-transform: uppercase;
@@ -422,19 +426,6 @@ hr.type {
 
     .sides {
       width: 270px;
-
-      .contact {
-        padding-left: 15px;
-
-
-        img {
-          width: 35px;
-          background-color: $bacckgoundcolor;
-          border-radius: 100%;
-          padding: 2px;
-        }
-      }
-
       h5 {
         font-size: 18px;
         line-height: 180%;
@@ -448,7 +439,8 @@ hr.type {
       .email {
         background-repeat: no-repeat;
         background-position: 0px 60%;
-        a {         
+
+        a {
           color: #545454;
         }
       }
@@ -461,7 +453,6 @@ hr.type {
         background-image: url("../img/mail.gif");
       }
     }
-
     .minigallery {
       width: 570px;
 
@@ -481,7 +472,15 @@ hr.type {
     }
   }
 }
-
+.iconsocial {
+  padding-left: 15px;
+  img {
+    width: 35px !important;
+    background-color: $bacckgoundcolor;
+    border-radius: 100% !important;
+    padding: 2px;
+  }
+}
 .footer_bootom {
   background: $bacckgoundcolor;
   color: $colortextbacck;
@@ -895,20 +894,25 @@ hr.type {
   .header_top_item span {
     display: block;
   }
+
   .header .header_top {
-    font-size: 14px;}
-    .menuBurger {
-      top: 72px;}
+    font-size: 14px;
+  }
+
+  .menuBurger {
+    top: 72px;
+  }
+
   .section_hover {
     .carousel-inner {
       .carousel-caption {
 
         p {
-          font-size: 10px;
+          font-size: 12px;
         }
 
         h3 {
-          font-size: 18px;
+          font-size: 20px;
         }
 
         .piling {
@@ -978,6 +982,10 @@ hr.type {
     top: 60px;
   }
 
+  .section_hover .carousel-inner .carousel-caption .brovi {
+    bottom: -19px;
+  }
+
   .section_hover .carousel-inner .carousel-caption p {
     font-size: 9px;
   }
@@ -985,8 +993,16 @@ hr.type {
   .section_hover .carousel-inner .carousel-caption h3 {
     font-size: 16px;
   }
-
+  .owl-carousel .owl-prev{
+    top: 67px ;}
   .owl-carousel .owl-next {
-    left: 230px;
+    left: 225px;
+    top: 67px ;
   }
+  .owl-carousel .owl-item .owl-items img {
+    width: 207px;
+    height: 198px;}
 }
+.owl-carousel .owl-item {
+  padding-left: 15px;}
+  

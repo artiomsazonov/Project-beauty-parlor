@@ -114,6 +114,29 @@ span.onclick = function () {
 //       });
 //   });
   
+//------Bot
+
+
+
+var name = $('#fio').value;
+var phone = $('#tel').value;
+var email = $('#service').value;
+
+//в переменную $token нужно вставить токен, который нам прислал @botFather
+var token = "1022559271:AAF0gnWbxzfESDiGBjZ9KgpEj4O8ZLJ25NE";
+
+//нужна вставить chat_id (Как получить chad id, читайте ниже)
+ var chat_id = "510302288";
+$('#submit').click(function(){
+    var txt = name + " " + phone + " " + email;
+    var gram = "https://api.telegram.org/bot" + $token+"/sendMessage?chat_id=" + $chat_id+"&text="+ txt;
+    $( "#second_form" ).attr( "action", "gram" );
+})
+
+
+
+//Осуществляется отправка данных в переменной $sendToTelegram
+
 // ---- UL
 $(".five li ul").hide();
 $(".five li:has('.submenu')").hover(
@@ -121,3 +144,11 @@ $(".five li:has('.submenu')").hover(
         $(".five li ul").stop().fadeToggle(300);
     }
 );
+//-----mastera
+
+  $(document).ready(function(){
+  $(".openokno2").click(function(){
+  $(".blockcentr2").slideToggle("2000");
+  });
+  });
+ 
