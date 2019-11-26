@@ -1,0 +1,54 @@
+.galerey{
+    display: flex;
+    justify-content: space-between;
+    .galerey-item{
+       
+        display: flex;
+    flex-wrap: wrap;
+    .galerey-items{
+        img{
+        width: 345px;
+        padding: 5px 0;
+        }
+    }
+    }
+}
+//-окно
+.okn {
+    position: fixed;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #d4d3d4;
+    text-align: center;
+    width: 400px;
+    height: 150px;
+    z-index: 999999;
+    right: 40%;
+    top: 20%;
+}
+.sent{
+    padding-top: 5px;
+    font-size: 24px;
+    color: #7a7992 !important;
+    font-weight: 400;
+    font-family: "Arizonia", cursive;
+}
+.err {
+    background-color: #ffc1ca;
+    color: #cd173a;
+}
+
+.ale{
+    background-color: #e1e1e1;
+    color: #667cfc;
+}
+
+.msg {
+    background-color: #f1fbc1;
+    
+}
+.galerey .galerey-item .galerey-items img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
