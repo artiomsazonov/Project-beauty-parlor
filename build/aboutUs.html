@@ -41,7 +41,7 @@
                         <ul class="menu topmenu">
                             <li><a href="index.html">Главная</a></li>
                             <li><a href="aboutus.html">О нас</a></li>
-                            <li><a href="uslugi.html">Услуги &#9660;<i class="fa fa-angle-down"></i></a>
+                            <li><a href="catalog.html">Услуги &#9660;<i class="fa fa-angle-down"></i></a>
                                 <ul class="submenu">
                                     <li><a href="">Волосы</a></li>
                                     <li><a href="">Брови</a></li>
@@ -297,7 +297,7 @@
                             <ul>
                                 <li><a href="index.html">Главная</a></li>
                                 <li><a href="aboutUs.html">О нас</a></li>
-                                <li><a href="uslugi.html">Услуги</a></li>
+                                <li><a href="catalog.html">Услуги</a></li>
                                 <li><a href="galerey.html">Галерея</a></li>
                                 <li><a href="#top">Контакты</a></li>
                                 <li><a data-toggle-id="mdl" class="mBtn">Бронирование</a></li>
@@ -315,19 +315,21 @@
                     <h2>Запись на услугу</h2>
                 </div>
                 <div class="mdl-body">
-    
-                    <form id="second_form" method="post" class="form-msg" action="">
-                        <p class="input"> <input class="require" id="fname" name="service" type="text"
-                                placeholder="Услуга *"> </p>
-                        <p class="input"><input class="require" id="lname" name="fio" type="text" placeholder="Ваше имя *">
+                    <form id="second_form" class="form-msg">
+                        <p class="input">
+                            <input id="vidUs" name="service" type="text" placeholder="Услуга *"> </p>
+                        <p class="input">
+                            <input id="lname" name="fio" type="text" placeholder="Ваше имя *">
                         </p>
-                        <p class="input"><input class="require" id="psword" name="tel" type="text"
-                                placeholder="Ваш  телефон *"></p>
-                        <p class="input"><input class="require" type="checkbox" name="agreement"> <span>Согласен на
+                        <p class="input">
+                            <input id="tel" name="tel" type="text" placeholder="Ваш  телефон *"></p>
+                        <p class="input">
+                            <input required type="checkbox" name="agreement"> <span>Согласен на
                                 обработку персональных данных *</span> </p>
-                        <p class="input"><input id="submit" name="requestpricebtn" type="submit" value="Отправить"></p>
+                        <p class="input">
+                            <button id="submit" type="submit">Отправить</button>
+                            </p>
                     </form>
-    
                 </div>
                 <div class="mdl-footer">
                 </div>

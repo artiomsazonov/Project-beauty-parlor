@@ -32,10 +32,13 @@
     }
   }
 }
-.articl{
-  .description {    
+
+.articl {
+  .description {
     margin: 30px 3%;
-}}
+  }
+}
+
 .iks {
   cursor: pointer;
   float: right;
@@ -54,4 +57,55 @@
   border: 1px solid #A5A5A5;
   z-index: 999;
   top: 10%;
+}
+
+// --Uslugi
+.scroll {
+  .usl {
+    width: 254px !important;
+
+    h3 {
+      font-size: 18px;
+      padding: 20px 0;
+      line-height: 1 !important;
+      margin: 0;
+      color: #2d2c40;
+      font-weight: 400;
+    }
+
+    span {
+      font-size: 35px;
+      line-height: 17px;
+      color: #7a7992;
+      font-weight: 300;
+      padding: 10px 0 0;
+      font-style: normal;
+      font-family: "Arizonia", cursive;
+    }
+
+    .old_price {
+      text-decoration: line-through;
+      color: red !important;
+      font-size: 25px !important;
+      margin-left: 10px;
+    }
+
+    .hb-postcategory {
+      color: #fac0f9;
+      font-size: 18px;
+      line-height: 55px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    img {
+      width: 254px !important;
+      transition: 1s linear;
+    }
+
+  }
+}
+//--bot
+.success{
+  color: aqua;
 }

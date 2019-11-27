@@ -332,10 +332,11 @@ a:hover {
   text-transform: uppercase;
   background: #a292b3;
   font: 500 14px/45px Poppins, Arial, Helvetica, sans-serif;
+  transition: 1s linear;
 }
 
 .hid {
-  display: none !important;
+  display: none;
 }
 
 .btn_button:hover {
@@ -565,6 +566,10 @@ hr.type {
         text-decoration: none;
         cursor: pointer;
       }
+    }
+    .error {
+      color: red;
+      margin-left: 5px;
     }
 
     @-webkit-keyframes animatetop {

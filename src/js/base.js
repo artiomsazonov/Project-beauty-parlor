@@ -1,4 +1,3 @@
-
 //olcorusel
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
@@ -62,21 +61,13 @@ $(document).ready(function () {
 
 //btn hidden----
 
-var linc2 = $('.btn_button'),
-    timeoutId;
-$('.owl-items img').hover(function () {
+var timeoutId;
+$('.owl-items ').hover(function () {
     clearTimeout(timeoutId);
-    linc2.show();
+    $(this).children(".btn_button").show();
 }, function () {
-    timeoutId = setTimeout($.proxy(linc2, 'hide'), 1000)
+    timeoutId = setTimeout($.proxy($(this).children(".btn_button"), 'hide'), 1000)
 });
-linc2.mouseenter(function () {
-    clearTimeout(timeoutId);
-}).mouseleave(function () {
-    linc2.hide();
-});
-
-
 
 // modal word
 
@@ -93,49 +84,55 @@ span.onclick = function () {
     modal.hidden = !modal.hidden;
 }
 // //---valid
-// $(document).ready(function() {
-//     $('form[id="second_form"]').validate({
-//         rules: {
-//           service: 'required',
-//           lname: 'required',          
-//           tel: {
-//             required: true,
-//             minlength: 8,
-//           }
-//         },
-//         messages: {
-//           service: 'Поле пустое',
-//           lname: 'Поле пустое',
-//           tel: {
-//             required: 'Поле пустое',
-//             minlength: 'Телефон должен содержать не меньше 8 символов'
-//           }
-//         },
-//         submitHandler: function(form) {
-//           form.submit();
-//         }
-//       });
-//   });
 
+
+$(document).ready(function () {
+    $('#second_form').submit(function (e) {
+        var vidUs = $('#vidUs').val();
+        var last_name = $('#lname').val();
+        var tel = $('#tel').val();
+        e.preventDefault();
+        $(".error").remove();
+        if (vidUs.length < 1) {
+            $('#vidUs').after('<span class="error">Поле пустое</span>');
+        }
+        if (last_name.length < 1) {
+            $('#lname').after('<span class="error">Поле пустое</span>');
+        }
+        if (tel.length < 8) {
+            $('#tel').after('<span class="error">Телефон должен содержать не меньше 8 символов</span>');
+        }
+    });
+});
 //------Bot
-
-
-
-var name = $('#fio').value;
-var phone = $('#tel').value;
-var email = $('#service').value;
-
-//в переменную $token нужно вставить токен, который нам прислал @botFather
-var token = "1022559271:AAF0gnWbxzfESDiGBjZ9KgpEj4O8ZLJ25NE";
-
-//нужна вставить chat_id (Как получить chad id, читайте ниже)
-var chat_id = "510302288";
-$('#submit').click(function () {
-    var txt = name + " " + phone + " " + email;
-    var gram = "https://api.telegram.org/bot" + $token + "/sendMessage?chat_id=" + $chat_id + "&text=" + txt;
-    $("#second_form").attr("action", "gram");
+var vidUs = document.querySelector('#vidUs');
+var last_name = document.querySelector('#lname');
+var tel = document.querySelector('#tel');
+var sendMsg = document.querySelector('#submit');
+sendMsg.addEventListener('click', function () {
+    if (vidUs.value && last_name.value && tel.value) {
+        msg = 'Name: ' + last_name.value + ' ' + '; Tel: ' + tel.value + "; Usluga" + vidUs.value;
+        var botLink = 'https://api.telegram.org/bot1022559271:AAF0gnWbxzfESDiGBjZ9KgpEj4O8ZLJ25NE/sendMessage?chat_id=510302288&text=' + msg;
+        fetch(botLink);
+        clearInputs();
+        sendMsg.classList.add('success');
+        sendMsg.innerHTML = '&#10004;';
+        setTimeout(function () {
+            if (sendMsg.classList.contains('success')) {
+                sendMsg.classList.remove('success');
+                sendMsg.innerHTML = 'Отправить';
+            }
+        }, 2000)
+    } else {
+        checkInputs()
+    }
 })
-
+function clearInputs() {
+    var inputX = document.querySelectorAll("input")
+    for (var i = 0; i < inputX.length; i++) {
+        inputX[i].value = "";
+    }
+}
 // ---- UL
 $(".five li ul").hide();
 $(".five li:has('.submenu')").hover(
@@ -152,10 +149,10 @@ $(document).ready(function () {
 });
 // ------- окно
 
-function showPopUp(type) {    
+function showPopUp(type) {
     var div = document.querySelector('.okn');
     var p = document.querySelector('.sent');
-    setTimeout(function () { div.classList.toggle('hid');}, 5000);
+    setTimeout(function () { div.classList.toggle('hid'); }, 5000);
     switch (type) {
         case "galerey":
             div.classList.add('err');
@@ -178,8 +175,21 @@ setTimeout(function () { showPopUp(document.querySelector(".shuwP").getAttribute
 //---galerey
 
 window.onload = function(){
-    $('.owl-items').hover(activUP);
+    $('.galerey-items img').hover(activUP);
 }
 function activUP(){
-    this.classList.toggle("h");
+    this.classList.toggle('animated');
+    this.classList.toggle('heartBeat');
 }
+
+// usluga
+$(".usl").hover(function () {
+    $(this).children("img").css(
+        "border-radius", "70%"
+    )
+}, function () {
+    $(this).children("img").css(
+        "border-radius", "5%"
+    )
+})
+//
