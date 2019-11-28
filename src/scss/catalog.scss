@@ -1,0 +1,53 @@
+// - основной экран
+.pros{
+.scroll {
+    .usl {
+      width: 30%;  
+      h3 {
+        font-size: 18px;
+        padding: 20px 0;
+        line-height: 1 !important;
+        margin: 0;
+        color: #2d2c40;
+        font-weight: 400;
+      }
+  
+      span, h1 {
+        font-size: 35px;
+        line-height: 17px;
+        color: #7a7992;
+        font-weight: 300;
+        padding: 10px 0 0;
+        font-style: normal;
+        font-family: "Arizonia", cursive;
+      }
+      h1{
+        color: black;  
+        padding: 0;
+        margin-top: 0;      
+      }
+      .old_price {
+        text-decoration: line-through;
+        color: red !important;
+        font-size: 25px !important;
+        margin-left: 10px;
+      }
+  
+      .hb-postcategory {
+        color: #fac0f9;
+        font-size: 18px;
+        line-height: 55px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+  
+      img {       
+        transition: 1s linear;
+        width: 100%;
+      }
+  
+    }
+  }
+}
+  //  --- открывающий экран

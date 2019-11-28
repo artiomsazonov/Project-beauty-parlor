@@ -367,7 +367,7 @@ hr.type {
 
     .flex-scroll {
       width: 500px;
-
+      margin: 1%;
       h3 {
         font-size: 20px;
         line-height: 200%;
@@ -522,7 +522,7 @@ hr.type {
   font-family: Arizonia, cursive;
   text-align: center;
   position: fixed;
-  z-index: 100;
+  z-index: 10000;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -596,8 +596,8 @@ hr.type {
       }
     }
   }
-
   .mdl-body {
+    
     .input {
       padding: 5px 0;
 
@@ -750,11 +750,11 @@ hr.type {
     padding-bottom: 20px;
 
     .scroll {
-      .flex-scroll {
+      .flex-scroll {        
+         
         h3 {
           margin-top: 0;
           line-height: 1;
-
         }
 
         img {

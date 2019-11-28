@@ -143,10 +143,14 @@ $(".five li:has('.submenu')").hover(
 //-----mastera
 
 $(document).ready(function () {
-    $(".openokno2").click(function () {
-        $(".blockcentr2").slideToggle("2000");
-    });
-});
+    $('.openokno').click(activ);
+})
+function activ() {
+    $(this).next(".blockcentr").slideToggle("2000");
+    $(this).parent(".blockcentr").slideToggle("2000");
+
+}
+
 // ------- окно
 
 function showPopUp(type) {
@@ -174,12 +178,12 @@ function showPopUp(type) {
 setTimeout(function () { showPopUp(document.querySelector(".shuwP").getAttribute('name')) }, 2000);
 //---galerey
 
-window.onload = function(){
+window.onload = function () {
     $('.galerey-items img').hover(activUP);
 }
-function activUP(){
+function activUP() {
     this.classList.toggle('animated');
-    this.classList.toggle('heartBeat');
+    this.classList.toggle('rubberBand');
 }
 
 // usluga
