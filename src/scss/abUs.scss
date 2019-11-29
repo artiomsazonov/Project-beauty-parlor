@@ -36,6 +36,20 @@
 .articl {
   .description {
     margin: 30px 3%;
+
+  }
+}
+
+.scroll {
+  .flex-scroll {
+    .description {
+      margin: 0;
+      text-align: left;
+      h2{
+        margin-top: 0;
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -52,15 +66,25 @@
   left: 2%;
   background: #f7f7f7;
   padding: 15px;
-  line-height: 23px;
+  line-height: 1.7;
   border-radius: 10px;
   border: 1px solid #A5A5A5;
   z-index: 999;
   top: 1%;
+  height: 560px;
+  overflow: auto;
 }
 
 
 //--bot
-.success{
-  color: aqua;
+.success {
+  color: rgb(28, 199, 42);
+  position: absolute;
+  top: 106px;
+  width: 50%;
+  height: 93px;
+  font-size: 26px;  
+  left: 25%;
+  background: #801c00a8;
+  font-weight: 800;
 }

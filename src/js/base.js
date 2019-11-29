@@ -111,18 +111,18 @@ var tel = document.querySelector('#tel');
 var sendMsg = document.querySelector('#submit');
 sendMsg.addEventListener('click', function () {
     if (vidUs.value && last_name.value && tel.value) {
-        msg = 'Name: ' + last_name.value + ' ' + '; Tel: ' + tel.value + "; Usluga" + vidUs.value;
+        msg = 'Name: ' + last_name.value + ' ' + '; Tel: ' + tel.value + "; Usluga: " + vidUs.value;
         var botLink = 'https://api.telegram.org/bot1022559271:AAF0gnWbxzfESDiGBjZ9KgpEj4O8ZLJ25NE/sendMessage?chat_id=510302288&text=' + msg;
         fetch(botLink);
         clearInputs();
         sendMsg.classList.add('success');
-        sendMsg.innerHTML = '&#10004;';
+        sendMsg.innerHTML = '&#10004 Заявка отправлена &#10004;';
         setTimeout(function () {
             if (sendMsg.classList.contains('success')) {
                 sendMsg.classList.remove('success');
                 sendMsg.innerHTML = 'Отправить';
             }
-        }, 2000)
+        }, 3000)
     } else {
         checkInputs()
     }

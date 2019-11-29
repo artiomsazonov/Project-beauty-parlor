@@ -12,26 +12,14 @@
         font-weight: 400;
       }
   
-      span, h1 {
-        font-size: 35px;
-        line-height: 17px;
-        color: #7a7992;
-        font-weight: 300;
-        padding: 10px 0 0;
-        font-style: normal;
-        font-family: "Arizonia", cursive;
-      }
+     
       h1{
         color: black;  
         padding: 0;
-        margin-top: 0;      
+        margin-top: 0;   
+        line-height: 1;   
       }
-      .old_price {
-        text-decoration: line-through;
-        color: red !important;
-        font-size: 25px !important;
-        margin-left: 10px;
-      }
+      
   
       .hb-postcategory {
         color: #fac0f9;
@@ -50,4 +38,19 @@
     }
   }
 }
+.hb-postmeta{
+span, h1 {
+  font-size: 35px;     
+  color: #7a7992;
+  font-weight: 300;
+  padding: 10px 0 0;
+  font-style: normal;
+  font-family: "Arizonia", cursive;
+}
+.old_price {
+  text-decoration: line-through;
+  color: red !important;
+  font-size: 25px !important;
+  margin-left: 10px;
+}}
   //  --- открывающий экран
