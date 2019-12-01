@@ -5,15 +5,19 @@ $(document).ready(function () {
         nav: true,
         margin: 10,
         merge: true,
-        autoplay: true,
+        autoplay: false,
         responsive: {
             0: {
                 items: 1
             },
-            600: {
+            638: {
                 items: 2
             },
-            1000: {
+            
+            992: {
+                items: 3
+            },
+            1130: {
                 items: 4
             }
         }
