@@ -736,7 +736,6 @@ hr.type {
 
     .scroll {
       .flex-scroll {
-
         h3 {
           margin-top: 0;
           line-height: 1;
@@ -1109,7 +1108,7 @@ hr.type {
 
 @media screen and (max-width: 338px) {
   .section_description .owl-carousel .owl-item .owl-items {
-    padding-left: 0;
+    padding-left: 10px;
   }
 
   .section_description .owl-carousel .owl-next {

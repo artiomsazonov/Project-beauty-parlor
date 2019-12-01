@@ -1,8 +1,9 @@
 // - основной экран
-.pros{
-.scroll {
+.pros {
+  .scroll {
     .usl {
-      width: 30%;  
+      width: 30%;
+
       h3 {
         font-size: 18px;
         padding: 20px 0;
@@ -11,16 +12,16 @@
         color: #2d2c40;
         font-weight: 400;
       }
-  
-     
-      h1{
-        color: black;  
+
+
+      h1 {
+        color: black;
         padding: 0;
-        margin-top: 0;   
-        line-height: 1;   
+        margin-top: 0;
+        line-height: 1;
       }
-      
-  
+
+
       .hb-postcategory {
         color: #fac0f9;
         font-size: 18px;
@@ -29,28 +30,50 @@
         text-transform: uppercase;
         cursor: pointer;
       }
-  
-      img {       
+
+      img {
         transition: 1s linear;
         width: 100%;
       }
-  
+
     }
   }
 }
-.hb-postmeta{
-span, h1 {
-  font-size: 35px;     
-  color: #7a7992;
-  font-weight: 300;
-  padding: 10px 0 0;
-  font-style: normal;
-  font-family: "Arizonia", cursive;
+
+.hb-postmeta {
+
+  span,
+  h1 {
+    font-size: 35px;
+    color: #7a7992;
+    font-weight: 300;
+    padding: 10px 0 0;
+    font-style: normal;
+    font-family: "Arizonia", cursive;
+  }
+
+  .old_price {
+    text-decoration: line-through;
+    color: red !important;
+    font-size: 25px !important;
+    margin-left: 10px;
+  }
 }
-.old_price {
-  text-decoration: line-through;
-  color: red !important;
-  font-size: 25px !important;
-  margin-left: 10px;
-}}
-  //  --- открывающий экран
+
+@media screen and (max-width: 480px) {
+  .articl {
+    .pros {
+      .scroll {
+        display: flex;
+        flex-wrap: wrap;
+
+        .flex-scroll {
+          width: 100%;
+          .hb-postcontent{
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

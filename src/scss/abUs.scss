@@ -42,10 +42,17 @@
 
 .scroll {
   .flex-scroll {
+    .iconsocial {
+      img {
+        width: 35px;
+      }
+    }
+
     .description {
       margin: 0;
       text-align: left;
-      h2{
+
+      h2 {
         margin-top: 0;
         padding: 0;
       }
@@ -83,8 +90,14 @@
   top: 106px;
   width: 50%;
   height: 93px;
-  font-size: 26px;  
+  font-size: 26px;
   left: 25%;
   background: #801c00a8;
   font-weight: 800;
+}
+
+@media screen and (max-width: 360px) {
+  .btn_button {
+    padding: 0 10px;
+  }
 }
