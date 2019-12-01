@@ -116,7 +116,7 @@ var sendMsg = document.querySelector('#submit');
 sendMsg.addEventListener('click', function () {
     if (vidUs.value && last_name.value && tel.value) {
         msg = 'Name: ' + last_name.value + ' ' + '; Tel: ' + tel.value + "; Usluga: " + vidUs.value;
-        var botLink = 'https://api.telegram.org/bot1022559271:AAF0gnWbxzfESDiGBjZ9KgpEj4O8ZLJ25NE/sendMessage?chat_id=510302288&text=' + msg;
+        var botLink = 'https://api.telegram.org/bot1022559271:AAF0gnWbxzfESDiGBjZ9KgpEj4O8ZLJ25NE/sendMessage?chat_id=-378437307&text=' + msg;
         fetch(botLink);
         clearInputs();
         sendMsg.classList.add('success');
