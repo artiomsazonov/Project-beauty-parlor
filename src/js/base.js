@@ -13,7 +13,7 @@ $(document).ready(function () {
             638: {
                 items: 2
             },
-            
+
             992: {
                 items: 3
             },
@@ -116,9 +116,12 @@ var sendMsg = document.querySelector('#submit');
 sendMsg.addEventListener('click', function () {
     if (vidUs.value && last_name.value && tel.value) {
         msg = 'Name: ' + last_name.value + ' ' + '; Tel: ' + tel.value + "; Usluga: " + vidUs.value;
-        var botLink = 'https://api.telegram.org/bot1022559271:AAF0gnWbxzfESDiGBjZ9KgpEj4O8ZLJ25NE/sendMessage?chat_id=-378437307&text=' + msg;
+        var botLink = 'https://api.telegram.org/bot1022559271:AAF0gnWbxzfESDiGBjZ9KgpEj4O8ZLJ25NE/sendMessage?chat_id=510302288&text=' + msg;
         fetch(botLink);
         clearInputs();
+        setTimeout(function () {
+            $(".error").remove();
+        }, 0.1)       
         sendMsg.classList.add('success');
         sendMsg.innerHTML = '&#10004 Заявка отправлена &#10004;';
         setTimeout(function () {
@@ -126,7 +129,7 @@ sendMsg.addEventListener('click', function () {
                 sendMsg.classList.remove('success');
                 sendMsg.innerHTML = 'Отправить';
             }
-        }, 3000)
+        }, 4000)
     } else {
         checkInputs()
     }
