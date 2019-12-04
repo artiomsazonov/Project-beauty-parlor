@@ -5,7 +5,7 @@ $(document).ready(function () {
         nav: true,
         margin: 10,
         merge: true,
-        autoplay: false,
+        autoplay: true,
         responsive: {
             0: {
                 items: 1
